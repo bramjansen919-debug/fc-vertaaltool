@@ -57,6 +57,11 @@ def vertaal_naar_eigen_taal(df: pd.DataFrame, retailer: str):
     df["Forecast"] = pd.to_numeric(df["Forecast"], errors="coerce") * config["unit_conversion_factor"]
     df = df.dropna(subset=["Forecast"])
 
+    df["SKU"] = df["SKU"].astype(str)
+    df["Periode"] = df["Periode"].astype(str)
+    df["Forecast"] = df["Forecast"].astype(float)
+    df = df.reset_index(drop=True)
+
     return df, aantal_overgeslagen
 
 
