@@ -1,0 +1,32 @@
+{
+  "Retailer A": {
+    "format": "long",
+    "column_mapping": {
+      "Product Code": "SKU",
+      "Week": "Periode",
+      "Forecast (dozen)": "Forecast"
+    },
+    "unit_conversion_factor": 12,
+    "unit_label": "dozen \u2192 stuks",
+    "skip_rows": 0
+  },
+  "Retailer B": {
+    "format": "long",
+    "column_mapping": {
+      "ArtNr": "SKU",
+      "Maand": "Periode",
+      "Fcst_Units": "Forecast"
+    },
+    "unit_conversion_factor": 1,
+    "unit_label": "stuks (geen conversie)",
+    "skip_rows": 0
+  },
+  "Retailer C": {
+    "format": "wide",
+    "skip_rows": 1,
+    "sku_column": "EAN",
+    "columns_to_drop": ["Omschrijving"],
+    "unit_conversion_factor": 6,
+    "unit_label": "dozen (6 stuks) \u2192 stuks"
+  }
+}
