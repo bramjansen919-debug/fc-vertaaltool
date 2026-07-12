@@ -1,9 +1,0 @@
-[theme]
-primaryColor = "#2A4CB5"
-backgroundColor = "#FFFFFF"
-secondaryBackgroundColor = "#F4F6FB"
-textColor = "#1A2B4C"
-font = "sans serif"
-
-[server]
-fileWatcherType = "none"
